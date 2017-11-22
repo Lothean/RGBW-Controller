@@ -3,6 +3,9 @@
 #define IR_DIY1   0xFF30CF
 #define IR_DIY2   0xFFB04F
 #define IR_DIY3   0xFF708F
+#define IR_DIY4   0xFF10EF  
+#define IR_DIY5   0xFF906F 
+#define IR_DIY6   0xFF50AF
 bool isOn = true;
 int irSensor = 12;
 byte rgbw[] = {5, 9, 6, 10}; //change the pins here according to yours
@@ -63,13 +66,34 @@ void ir() {
       fadeUpdate();
     }
     if (results.value == IR_DIY2 && isOn) {
+      newColor[0] = 128;
+      newColor[1] = 128;
+      newColor[2] = 128;
+      newColor[3] = 64;
+      fadeUpdate();
+    }
+    if (results.value == IR_DIY3 && isOn) {
+      newColor[0] = 64;
+      newColor[1] = 64;
+      newColor[2] = 64;
+      newColor[3] = 32;
+      fadeUpdate();
+    }
+    if (results.value == IR_DIY4 && isOn) {
+      newColor[0] = 16;
+      newColor[1] = 16;
+      newColor[2] = 16;
+      newColor[3] = 8;
+      fadeUpdate();
+    }
+    if (results.value == IR_DIY5 && isOn) {
       newColor[0] = 1;
       newColor[1] = 1;
       newColor[2] = 1;
       newColor[3] = 1;
       fadeUpdate();
     }
-    if (results.value == IR_DIY3 && isOn) {
+    if (results.value == IR_DIY6 && isOn) {
       newColor[0] = 1;
       newColor[1] = 0;
       newColor[2] = 0;
