@@ -44,6 +44,7 @@
 #define IR_JUMP7  0xFFA05F
 #define IR_FADE3  0xFF609F
 #define IR_FADE7  0xFFE01F
+bool isFade = true;
 bool isOn = true;
 int white = 5;
 int irSensor = 12; // The input pin for your IR sensor
@@ -67,6 +68,7 @@ void setup() {
 
 void loop() {
   ir(); // This function is called everytime in the loop to handle IR signals and use them
+  fade();
   delay(15);
 }
 
@@ -279,6 +281,9 @@ void ir() { // IR handling
       defineWhite();
       fadeUpdate();
     }
+    if (results.value == IR_FADE3 && isOn) {
+      isFade = !isFade;
+    }
     if (results.value == IR_PAUSE && isOn) {
       bool whiteGoingPositive;
       if (white == 5) {
@@ -342,5 +347,13 @@ void defineWhite() {
     case 5:
       newColor[3] = 128;
       break;
+  }
+}
+void fade() {
+  if (isFade && isOn) {
+    newColor[0] = random(0, 255);
+    newColor[1] = random(0, 255);
+    newColor[2] = random(0, 255);
+    fadeUpdate();
   }
 }
