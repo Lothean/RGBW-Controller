@@ -167,6 +167,118 @@ void ir() { // IR handling
       defineWhite();
       fadeUpdate();
     }
+    if (results.value == IR_B1 && isOn) {
+      newColor[0] = 255;
+      newColor[1] = 165;
+      newColor[2] = 0;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B2 && isOn) {
+      newColor[0] = 144;
+      newColor[1] = 238;
+      newColor[2] = 144;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B3 && isOn) {
+      newColor[0] = 25;
+      newColor[1] = 25;
+      newColor[2] = 112;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B4 && isOn) {
+      newColor[0] = 220;
+      newColor[1] = 217;
+      newColor[2] = 205;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B5 && isOn) {
+      newColor[0] = 255;
+      newColor[1] = 215;
+      newColor[2] = 0;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B6 && isOn) {
+      newColor[0] = 0;
+      newColor[1] = 255;
+      newColor[2] = 255;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B7 && isOn) {
+      newColor[0] = 72;
+      newColor[1] = 61;
+      newColor[2] = 139;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B8 && isOn) {
+      newColor[0] = 255;
+      newColor[1] = 192;
+      newColor[2] = 203;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B9 && isOn) {
+      newColor[0] = 255;
+      newColor[1] = 255;
+      newColor[2] = 0;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B10 && isOn) {
+      newColor[0] = 173;
+      newColor[1] = 216;
+      newColor[2] = 230;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B11 && isOn) {
+      newColor[0] = 160;
+      newColor[1] = 32;
+      newColor[2] = 240;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B12 && isOn) {
+      newColor[0] = 220;
+      newColor[1] = 255;
+      newColor[2] = 220;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B13 && isOn) {
+      newColor[0] = 255;
+      newColor[1] = 255;
+      newColor[2] = 224;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B14 && isOn) {
+      newColor[0] = 135;
+      newColor[1] = 206;
+      newColor[2] = 250;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B15 && isOn) {
+      newColor[0] = 165;
+      newColor[1] = 42;
+      newColor[2] = 42;
+      defineWhite();
+      fadeUpdate();
+    }
+    if (results.value == IR_B16 && isOn) {
+      newColor[0] = 220;
+      newColor[1] = 220;
+      newColor[2] = 255;
+      defineWhite();
+      fadeUpdate();
+    }
     if (results.value == IR_PAUSE && isOn) {
       bool whiteGoingPositive;
       if (white == 5) {
