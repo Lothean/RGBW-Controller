@@ -44,7 +44,7 @@
 #define IR_JUMP7  0xFFA05F
 #define IR_FADE3  0xFF609F
 #define IR_FADE7  0xFFE01F
-bool isFade = true;
+bool isFade = false;
 bool isOn = true;
 int white = 5;
 int irSensor = 12; // The input pin for your IR sensor
