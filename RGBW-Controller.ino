@@ -44,6 +44,7 @@
 #define IR_JUMP7  0xFFA05F
 #define IR_FADE3  0xFF609F
 #define IR_FADE7  0xFFE01F
+bool whiteGoingPositive;
 bool isFade = false;
 bool isOn = true;
 int white = 5;
@@ -285,7 +286,6 @@ void ir() { // IR handling
       isFade = !isFade;
     }
     if (results.value == IR_PAUSE && isOn) {
-      bool whiteGoingPositive;
       if (white == 5) {
         whiteGoingPositive = false;
       }
