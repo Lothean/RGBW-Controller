@@ -294,7 +294,6 @@ void ir() { // IR handling
         for (int i = 0; i <= 3; i++) {
           newColor[i] = backupColor[i];
         }
-        defineWhite();
         fadeUpdate();
       }
     }
