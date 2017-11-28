@@ -284,6 +284,19 @@ void ir() { // IR handling
     }
     if (results.value == IR_FADE3 && isOn) {
       isFade = !isFade;
+      if (isFade) {
+        for (int i = 0; i <= 3; i++) {
+          backupColor[i] = currentColor[i];
+        }
+        defineWhite();
+      }
+      else {
+        for (int i = 0; i <= 3; i++) {
+          newColor[i] = backupColor[i];
+        }
+        defineWhite();
+        fadeUpdate();
+      }
     }
     if (results.value == IR_PAUSE && isOn) {
       if (white == 5) {
